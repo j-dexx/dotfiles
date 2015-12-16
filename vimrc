@@ -81,3 +81,13 @@ nmap <leader>vr :sp $MYVIMRC<cr>
 
 " Source (reload) your vimrc. Type space, s, o in sequence to trigger
 nmap <leader>so :source $MYVIMRC<cr>
+
+" For testing
+" RSpec.vim mappings
+nnoremap <leader>t :call RunCurrentSpecFile()<cr>
+nnoremap <leader>s :call RunNearestSpec()<cr>
+nnoremap <leader>l :call RunLastSpec()<cr>
+nnoremap <leader>a :call RunAllSpecs()<cr>
+
+"Now using thoughtbot/vim-rspec and tpope/dispatch.
+let g:rspec_command = "Dispatch bin/rspec {spec}"

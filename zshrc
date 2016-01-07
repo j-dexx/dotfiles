@@ -1,6 +1,6 @@
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-# export TERM=xterm-256color
+export TERM=xterm-256color
 
 # Base16 Shell
 # https://github.com/chriskempson/base16-shell

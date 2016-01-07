@@ -32,7 +32,6 @@ set scrolloff=4                 " Keep at least 4 lines below cursor
 set nobackup
 set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
-set background=dark
 
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =

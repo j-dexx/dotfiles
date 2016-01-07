@@ -17,8 +17,7 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'pbrisbin/vim-mkdir'
 
 " Colors
-"Plug 'nanotech/jellybeans.vim'
-Plug 'chriskempson/base16-vim'
+Plug 'nanotech/jellybeans.vim'
 
 " Add plugins ro &runtimepath
 call plug#end()
@@ -40,6 +39,4 @@ if executable('ag')
 endif
 
 " Use the colorscheme from above
-"colorscheme jellybeans
-colorscheme base16-default
-let base16colorspace=256 " Access colors present in 256 colorspace
+colorscheme jellybeans

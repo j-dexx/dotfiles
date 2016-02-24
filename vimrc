@@ -23,6 +23,7 @@ set number                      " Display line numbers beside buffer
 set relativenumber              " Display relative line numbers
 set numberwidth=5
 
+set autoindent
 set nocompatible                " Don't maintain compatibilty with Vi.
 set hidden                      " Allow buffer change w/o saving
 set lazyredraw                  " Don't update while executing macros

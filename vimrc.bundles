@@ -18,6 +18,9 @@ Plug 'pbrisbin/vim-mkdir'
 Plug 'vim-ruby/vim-ruby' " to ensure latest version
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'garbas/vim-snipmate'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'honza/vim-snippets' " default snippets
 Plug 'pearofducks/ansible-vim'
 " Colors
 Plug 'nanotech/jellybeans.vim'

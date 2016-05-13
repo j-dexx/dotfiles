@@ -23,6 +23,7 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'honza/vim-snippets' " default snippets
 Plug 'pearofducks/ansible-vim'
 Plug 'rust-lang/rust.vim'
+Plug 'elixir-lang/vim-elixir'
 " Colors
 Plug 'nanotech/jellybeans.vim'
 

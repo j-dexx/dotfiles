@@ -3,6 +3,8 @@ if [ -d "$HOME/.rbenv" ]; then
   eval "$(rbenv init -)"
 fi
 
+export PATH=$HOME/bin:$PATH
+
 export TERM=xterm-256color
 
 # Allow cd to look in these directories

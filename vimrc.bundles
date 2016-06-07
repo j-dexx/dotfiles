@@ -20,6 +20,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'garbas/vim-snipmate'
 Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
 Plug 'honza/vim-snippets' " default snippets
 Plug 'pearofducks/ansible-vim'
 Plug 'rust-lang/rust.vim'

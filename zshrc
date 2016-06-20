@@ -9,7 +9,7 @@ export TERM=xterm-256color
 
 # Allow cd to look in these directories
 setopt auto_cd
-cdpath=($HOME/code/work $HOME/code $HOME)
+cdpath=($HOME/code/work $HOME/code/play/* $HOME/code $HOME)
 
 # If antigen exists, load it
 if [ -f ~/antigen/antigen.zsh ]; then

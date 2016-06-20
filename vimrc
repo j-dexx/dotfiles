@@ -34,8 +34,15 @@ set nobackup
 set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 
+" Highlight the status line
+highlight StatusLine ctermfg=yellow ctermbg=darkblue
+
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
+
+" set a colour column at 80 to show lines that are too long
+set colorcolumn=80
+highlight ColorColumn ctermbg=235
 
 " Softtabs, 2 spaces
 set tabstop=2

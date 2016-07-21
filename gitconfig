@@ -10,6 +10,7 @@
   co = checkout
   pf = push --force-with-lease
   st = status
+  ctags = !.git/hooks/ctags
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
@@ -24,3 +25,5 @@
 [user]
   email = jdoyley@gmail.com
   name = James Doyley
+[init]
+  templatedir = ~/.git_template

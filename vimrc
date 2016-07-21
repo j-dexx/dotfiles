@@ -91,11 +91,12 @@ nmap <leader>vr :sp $MYVIMRC<cr>
 nmap <leader>so :source $MYVIMRC<cr>
 
 " For testing
-" RSpec.vim mappings
-nnoremap <leader>t :call RunCurrentSpecFile()<cr>
-nnoremap <leader>s :call RunNearestSpec()<cr>
-nnoremap <leader>l :call RunLastSpec()<cr>
-nnoremap <leader>a :call RunAllSpecs()<cr>
+" Vim-test mappings
+nnoremap <leader>t :TestFile<cr>
+nnoremap <leader>s :TestNearest<cr>
+nnoremap <leader>l :TestLast<cr>
+nnoremap <leader>a :TestSuite<cr>
+nnoremap <leader>g :TestVisit<cr>
 
-"Now using thoughtbot/vim-rspec and tpope/dispatch.
-let g:rspec_command = "Dispatch bin/rspec {spec}"
+"Now using vim-test and tpope/dispatch.
+let test#strategy = "dispatch"

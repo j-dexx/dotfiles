@@ -27,6 +27,10 @@ Plug 'honza/vim-snippets' " default snippets
 Plug 'pearofducks/ansible-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'elixir-lang/vim-elixir'
+
+" Status bar
+Plug 'vim-airline/vim-airline'
+
 " Colors
 Plug 'nanotech/jellybeans.vim'
 

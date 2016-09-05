@@ -18,3 +18,7 @@ Other useful stuff
 - Install RCM
 - run `rcup -d ~/dotfiles`
 
+Change shell
+
+`chsh -s /bin/zsh`
+

@@ -49,6 +49,7 @@ set expandtab
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
+highlight SpecialKey ctermbg=red
 
 " Use one space, not two, after punctuation.
 set nojoinspaces

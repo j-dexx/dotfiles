@@ -53,5 +53,7 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+let g:airline_powerline_fonts = 1
+
 " Use the colorscheme from above
 colorscheme jellybeans

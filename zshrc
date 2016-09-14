@@ -3,6 +3,16 @@ if [ -d "$HOME/.rbenv" ]; then
   eval "$(rbenv init -)"
 fi
 
+if [ -d "$HOME/.config/composer" ]; then
+  export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+fi
+
+if [ -d "$HOME/Homestead" ]; then
+  function homestead() {
+    ( cd ~/Homestead && vagrant $* )
+  }
+fi
+
 export PATH=$HOME/bin:$PATH
 
 export TERM=xterm-256color

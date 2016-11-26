@@ -13,7 +13,7 @@ if [ -d "$HOME/Homestead" ]; then
   }
 fi
 
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/.config/composer/vendor/bin:$HOME/bin:$PATH
 
 export TERM=xterm-256color
 

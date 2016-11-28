@@ -7,10 +7,8 @@ if [ -d "$HOME/.config/composer" ]; then
   export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 fi
 
-if [ -d "$HOME/Homestead" ]; then
-  function homestead() {
-    ( cd ~/Homestead && vagrant $* )
-  }
+if [ -f ~/.aliases ]; then
+  source ~/.aliases
 fi
 
 export PATH=$HOME/bin:$PATH
@@ -25,7 +23,7 @@ cdpath=($HOME/code $HOME)
 if [ -f ~/antigen/antigen.zsh ]; then
   source ~/antigen/antigen.zsh
 
-  # Use pure 
+  # Use pure
   antigen bundle mafredri/zsh-async
   antigen bundle sindresorhus/pure
 

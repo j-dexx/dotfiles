@@ -19,16 +19,11 @@ export TERM=xterm-256color
 setopt auto_cd
 cdpath=($HOME/code $HOME)
 
-# If antigen exists, load it
-if [ -f ~/antigen/antigen.zsh ]; then
-  source ~/antigen/antigen.zsh
+source <(antibody init)
 
-  # Use pure
-  antigen bundle mafredri/zsh-async
-  antigen bundle sindresorhus/pure
+# Use pure
+antibody bundle mafredri/zsh-async
+antibody bundle sindresorhus/pure
 
-  # Syntax highlighting bundle.
-  antigen bundle zsh-users/zsh-syntax-highlighting
-
-  antigen apply
-fi
+# Syntax highlighting bundle.
+antibody bundle zsh-users/zsh-syntax-highlighting

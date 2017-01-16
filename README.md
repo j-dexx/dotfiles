@@ -2,9 +2,9 @@ Stuff to install for dotfiles
 
 - Vim
 - Zsh
-- [Antigen](https://github.com/zsh-users/antigen) - to go in ~/antigen
+- [Antibody](https://github.com/getantibody/antibody)
 - [Vim Plug](https://github.com/junegunn/vim-plug)
-- [Ag - The Silver Searcher](https://github.com/ggreer/the_silver_searcher)
+- [Ripgrep](https://github.com/BurntSushi/ripgrep)
 - [Universal ctags](https://github.com/universal-ctags/ctags) Exuberent ctags `sudo apt-get install exuberant-ctags`
 - [RCM](https://github.com/thoughtbot/rcm)
 

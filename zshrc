@@ -42,6 +42,16 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
   zle -N zle-line-finish
 fi
 
+# Check if a command exists
+command_exists () {
+  type "$1" > /dev/null 2>&1;
+}
+
+if command_exists thefuck; then
+  eval "$(thefuck --alias)"
+fi
+
+
 if [ -d "$HOME/.rbenv" ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"

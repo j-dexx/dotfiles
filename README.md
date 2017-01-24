@@ -2,6 +2,7 @@ Stuff to install for dotfiles
 
 - Vim
 - Zsh
+- [thefuck](https://github.com/nvbn/thefuck)
 - [Antibody](https://github.com/getantibody/antibody)
 - [Vim Plug](https://github.com/junegunn/vim-plug)
 - [Ripgrep](https://github.com/BurntSushi/ripgrep)

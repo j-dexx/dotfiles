@@ -15,6 +15,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-bundler'
+Plug 'dodie/vim-disapprove-deep-indentation'
 Plug 'janko-m/vim-test'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'vim-ruby/vim-ruby' " to ensure latest version

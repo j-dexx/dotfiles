@@ -1,1 +1,4 @@
 alias artisan="php artisan"
+if [ -f "/usr/bin/php56" ]; then
+  alias php5="/usr/bin/php56"
+fi

@@ -43,6 +43,10 @@ autocmd VimResized * :wincmd =
 set colorcolumn=80
 highlight ColorColumn ctermbg=235
 
+" add spell checking and automatic wrapping at the recommended
+" 72 columns to your commit messages
+autocmd Filetype gitcommit setlocal spell textwidth=72
+
 " Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2

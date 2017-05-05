@@ -73,6 +73,10 @@ export TERM=xterm-256color
 setopt auto_cd
 cdpath=($HOME/code $HOME)
 
+if [ -d "$HOME/code/php" ]; then
+  cdpath+="$HOME/code/php"
+fi
+
 source <(antibody init)
 
 # Use pure

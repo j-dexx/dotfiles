@@ -82,6 +82,7 @@ source <(antibody init)
 # Use pure
 antibody bundle mafredri/zsh-async
 antibody bundle sindresorhus/pure
+antibody bundle paulirish/git-open
 
 # Syntax highlighting bundle.
 antibody bundle zsh-users/zsh-syntax-highlighting

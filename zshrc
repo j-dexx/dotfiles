@@ -51,6 +51,10 @@ if command_exists thefuck; then
   eval "$(thefuck --alias)"
 fi
 
+if [ -d "$HOME/.asdf" ]; then
+  source $HOME/.asdf/asdf.sh
+  source $HOME/.asdf/completions/asdf.bash
+fi
 
 if [ -d "$HOME/.rbenv" ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
@@ -86,3 +90,4 @@ antibody bundle paulirish/git-open
 
 # Syntax highlighting bundle.
 antibody bundle zsh-users/zsh-syntax-highlighting
+

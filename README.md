@@ -8,6 +8,7 @@ Stuff to install for dotfiles
 - [Ripgrep](https://github.com/BurntSushi/ripgrep)
 - [Universal ctags](https://github.com/universal-ctags/ctags) Exuberent ctags `sudo apt-get install exuberant-ctags`
 - [RCM](https://github.com/thoughtbot/rcm)
+- [asdf](https://github.com/asdf-vm/asdf) - ASDF version manager
 
 Other useful stuff
 

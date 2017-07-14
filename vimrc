@@ -1,6 +1,9 @@
 " Use the space key as our leader. Put this near the top of your vimrc
 let mapleader = " "
 
+" Set 256 colours
+set t_Co=256
+
 " =================================
 " PLugins
 " =================================
@@ -13,6 +16,7 @@ endif
 " =================================
 
 filetype plugin indent on
+
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.

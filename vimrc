@@ -17,17 +17,28 @@ endif
 
 filetype plugin indent on
 
-
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
+""" omni #omni
+" enable omni syntax completion
+set omnifunc=syntaxcomplete#Complete
+
 " Numbers
 set number                      " Display line numbers beside buffer
-set relativenumber              " Display relative line numbers
 set numberwidth=5
+
+" Highlight search results
+set hlsearch
+" Incremental search, search as you type
+set incsearch
+" Ignore case when searching
+set ignorecase smartcase
+" Ignore case when searching lowercase
+set smartcase
 
 set autoindent
 set nocompatible                " Don't maintain compatibilty with Vi.
@@ -53,6 +64,8 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " Softtabs, 2 spaces
 set tabstop=2
+set softtabstop=2
+" - Indent by 2 spaces by default
 set shiftwidth=2
 set shiftround
 set expandtab

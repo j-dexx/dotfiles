@@ -40,6 +40,10 @@ Plug 'ervandew/supertab'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Easily manage tags files
+Plug 'ludovicchabant/vim-gutentags'
+  let g:gutentags_cache_dir = '~/.tags_cache'
+
 " Colors
 Plug 'nanotech/jellybeans.vim'
 

@@ -29,6 +29,13 @@ Plug 'pearofducks/ansible-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'elixir-lang/vim-elixir'
 
+" Like vim-rails but for phoenix
+Plug 'c-brenn/phoenix.vim'
+Plug 'tpope/vim-projectionist' " required for some navigation features
+
+" Use tab for insert completion
+Plug 'ervandew/supertab'
+
 " Status bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'

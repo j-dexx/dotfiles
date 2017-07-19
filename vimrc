@@ -29,6 +29,7 @@ set omnifunc=syntaxcomplete#Complete
 
 " Numbers
 set number                      " Display line numbers beside buffer
+set relativenumber              " Display relative line numbers beside buffer
 set numberwidth=5
 
 " Highlight search results

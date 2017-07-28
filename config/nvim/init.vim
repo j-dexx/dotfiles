@@ -97,7 +97,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-bundler'
 Plug 'pbrisbin/vim-mkdir'
@@ -126,9 +125,6 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'c-brenn/phoenix.vim' " Like vim-rails but for phoenix
 Plug 'tpope/vim-projectionist' " required for some navigation features
 
-" Php
-Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
-
 " Use tab for insert completion
 Plug 'ervandew/supertab'
 
@@ -142,6 +138,16 @@ Plug 'ludovicchabant/vim-gutentags'
 
 " For testing
 Plug 'janko-m/vim-test'
+
+" Vim-test mappings
+nnoremap <leader>t :TestFile<cr>
+nnoremap <leader>s :TestNearest<cr>
+nnoremap <leader>l :TestLast<cr>
+nnoremap <leader>a :TestSuite<cr>
+nnoremap <leader>g :TestVisit<cr>
+
+"Now using vim-test and neovim
+let test#strategy = "neovim"
 
 " Colorschemes
 Plug 'nanotech/jellybeans.vim'
@@ -225,6 +231,8 @@ nmap k gk
 " =================================
 " Leader Mappings
 " =================================
+"
+" Also some above for testing
 
 " Split edit your vimrc. Type space, v, r in sequence to trigger
 nmap <leader>vr :sp $MYVIMRC<cr>
@@ -232,13 +240,3 @@ nmap <leader>vr :sp $MYVIMRC<cr>
 " Source (reload) your vimrc. Type space, s, o in sequence to trigger
 nmap <leader>so :source $MYVIMRC<cr>
 
-" For testing
-" Vim-test mappings
-nnoremap <leader>t :TestFile<cr>
-nnoremap <leader>s :TestNearest<cr>
-nnoremap <leader>l :TestLast<cr>
-nnoremap <leader>a :TestSuite<cr>
-nnoremap <leader>g :TestVisit<cr>
-
-"Now using vim-test and tpope/dispatch.
-let test#strategy = "dispatch"

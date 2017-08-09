@@ -9,15 +9,17 @@ let mapleader = " "
 
 filetype plugin indent on
 
-
 """ Tabs #tabs
 " - Two spaces wide
 set tabstop=2
 set softtabstop=2
-" - Expand them all
+" - Expand tabs to whitespace
 set expandtab
 " - Indent by 2 spaces by default
 set shiftwidth=2
+
+" Set default encoding to utf 8
+set encoding=utf-8
 
 """ Format Options #format-options
 set textwidth=80
@@ -36,9 +38,11 @@ set hlsearch
 " Incremental search, search as you type
 set incsearch
 " Ignore case when searching
-set ignorecase smartcase
+set ignorecase
 " Ignore case when searching lowercase
 set smartcase
+" On pressing enter the second time remove highlighting
+map <CR> :nohl<cr>
 
 " Set the title of the terminal tab
 set title
@@ -86,44 +90,57 @@ augroup END
 " PLugins
 " =================================
 call plug#begin('~/.vim/plugged')
-
 " Make sure use single quotes
-Plug 'ap/vim-css-color'
-Plug 'tpope/vim-sensible'
+
+" Language support on demand!
+Plug 'sheerun/vim-polyglot'
+
+" Asynchronous file linter
+Plug 'w0rp/ale'
+  " wait a bit before checking syntax in a file, if typing
+  let g:ale_lint_delay = 5000
+  " Use global eslint
+  let g:ale_javascript_eslint_use_global = 1
+  " Only use es6 for js
+  let g:ale_linters = {'javascript': ['eslint']}
+
+" Plug 'tpope/vim-sensible'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'tpope/vim-rails'
+" Plug 'tpope/vim-rails'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tpope/vim-surround'
+" Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rails'
+" Plug 'tpope/vim-rails'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-bundler'
+
 Plug 'pbrisbin/vim-mkdir'
 Plug 'vim-ruby/vim-ruby' " to ensure latest version
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
 
+" Better terminal api
+Plug 'kassio/neoterm'
+
+" Asynchronous completion
+Plug 'wokalski/autocomplete-flow'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  let g:deoplete#enable_at_startup = 1
+  " use tab for completion - if popup visible send ctrl n else send tab
+  inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+"  let g:deoplete#sources = {}
+"  let g:deoplete#sources._ = ['file', 'neosnippet']
+"  let g:deoplete#omni#functions = {}
+"  let g:deoplete#omni#input_patterns = {}
 " For func argument completion - snippets
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
-" Plug 'honza/vim-snippets' " default snippets
-
-" Asynchronous completion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  let g:deoplete#enable_at_startup = 1
-  let g:deoplete#sources = {}
-  let g:deoplete#sources._ = ['file', 'neosnippet']
-  let g:deoplete#omni#functions = {}
-  let g:deoplete#omni#input_patterns = {}
 
 " Elixir
-Plug 'slashmili/alchemist.vim'
-Plug 'elixir-lang/vim-elixir'
-Plug 'c-brenn/phoenix.vim' " Like vim-rails but for phoenix
-Plug 'tpope/vim-projectionist' " required for some navigation features
+" Plug 'slashmili/alchemist.vim'
+" Plug 'elixir-lang/vim-elixir'
+" Plug 'c-brenn/phoenix.vim' " Like vim-rails but for phoenix
+" Plug 'tpope/vim-projectionist' " required for some navigation features
 
 " Use tab for insert completion
 Plug 'ervandew/supertab'
@@ -138,16 +155,14 @@ Plug 'ludovicchabant/vim-gutentags'
 
 " For testing
 Plug 'janko-m/vim-test'
-
-" Vim-test mappings
-nnoremap <leader>t :TestFile<cr>
-nnoremap <leader>s :TestNearest<cr>
-nnoremap <leader>l :TestLast<cr>
-nnoremap <leader>a :TestSuite<cr>
-nnoremap <leader>g :TestVisit<cr>
-
-"Now using vim-test and neovim
-let test#strategy = "neovim"
+  " Vim-test mappings
+  nnoremap <leader>t :TestFile<cr>
+  nnoremap <leader>s :TestNearest<cr>
+  nnoremap <leader>l :TestLast<cr>
+  nnoremap <leader>a :TestSuite<cr>
+  nnoremap <leader>g :TestVisit<cr>
+  " Now using vim-test and neoterm
+  let test#strategy = "neoterm"
 
 " Colorschemes
 Plug 'nanotech/jellybeans.vim'
@@ -193,7 +208,7 @@ let g:airline#extensions#tabline#enabled = 0
 " =================================
 
 " Switch syntax highlighting on, when the terminal has colors
-syntax on
+syntax enable
 if (empty($TMUX))
   if (has('termguicolors'))
     set termguicolors

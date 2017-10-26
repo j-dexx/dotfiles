@@ -146,8 +146,7 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'ervandew/supertab'
 
 " Status bar
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 
 " Easily manage tags files
 Plug 'ludovicchabant/vim-gutentags'
@@ -192,16 +191,9 @@ elseif executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-" Airline config
-let g:airline_theme = 'luna'
-"let g:airline_theme = 'lucius'
-let g:bufferline_echo = 0
-let g:airline_powerline_fonts=1
-let g:airline_enable_branch=1
-let g:airline_enable_syntastic=1
-let g:airline_branch_prefix = '⎇ '
-let g:airline_paste_symbol = '∥'
-let g:airline#extensions#tabline#enabled = 0
+let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ }
 
 " =================================
 " UI

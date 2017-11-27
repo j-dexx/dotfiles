@@ -13,6 +13,7 @@ Stuff to install for dotfiles
 Other useful stuff
 
 - [Zeal](https://zealdocs.org/)
+- [TLDR](https://github.com/tldr-pages/tldr)
 
 #  Installation
 

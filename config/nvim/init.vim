@@ -42,7 +42,7 @@ set ignorecase
 " Ignore case when searching lowercase
 set smartcase
 " On pressing enter the second time remove highlighting
-map <CR> :nohl<cr>
+"map <CR> :nohl<cr>
 
 " Set the title of the terminal tab
 set title

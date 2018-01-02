@@ -14,6 +14,7 @@ Other useful stuff
 
 - [Zeal](https://zealdocs.org/)
 - [TLDR](https://github.com/tldr-pages/tldr)
+- [Cerebro](https://cerebroapp.com/) - App launcher
 
 #  Installation
 

@@ -65,6 +65,10 @@ if [ -d "$HOME/.config/composer" ]; then
   export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 fi
 
+if [ -d "$HOME/.yarn/bin" ]; then
+  export PATH="$HOME/.yarn/bin:$PATH"
+fi
+
 if [ -f ~/.aliases ]; then
   source ~/.aliases
 fi

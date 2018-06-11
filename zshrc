@@ -95,3 +95,5 @@ antibody bundle paulirish/git-open
 # Syntax highlighting bundle.
 antibody bundle zsh-users/zsh-syntax-highlighting
 
+# https://github.com/sindresorhus/pure/issues/276
+setopt prompt_subst

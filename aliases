@@ -1,4 +1,5 @@
 alias artisan="php artisan"
+alias nah="git reset --hard && git clean -df"
 if [ -f "/usr/bin/php56" ]; then
   alias php5="/usr/bin/php56"
 fi

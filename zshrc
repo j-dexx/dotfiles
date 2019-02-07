@@ -74,6 +74,7 @@ if [ -f ~/.aliases ]; then
 fi
 
 export PATH=$HOME/bin:$PATH
+export XDEBUG_CONFIG="idekey=VSCODE"
 
 export TERM=xterm-256color
 

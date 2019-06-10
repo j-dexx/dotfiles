@@ -2,6 +2,8 @@
 autoload -Uz compinit
 compinit
 
+source <(kubectl completion zsh)
+
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
 typeset -A key

@@ -6,3 +6,5 @@ if [ -f "/usr/bin/php56" ]; then
 fi
 
 alias k=kubectl
+# switch namespace with kcd namespace
+alias kcd='kubectl config set-context $(kubectl config current-context) --namespace '

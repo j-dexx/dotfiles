@@ -3,6 +3,8 @@
 # Install zsh
 apt install -y zsh
 
+# Install firecode font
+apt install -y fonts-firacode
 
 # Install the fuck
 apt update

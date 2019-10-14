@@ -88,6 +88,10 @@ if [ -d "$HOME/code/php" ]; then
   cdpath+="$HOME/code/php"
 fi
 
+if [ -d "$HOME/code/ruby" ]; then
+  cdpath+="$HOME/code/ruby"
+fi
+
 source <(antibody init)
 
 # Use pure

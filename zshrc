@@ -18,7 +18,6 @@ fi
 
 if [ -d "$HOME/.asdf" ]; then
   source $HOME/.asdf/asdf.sh
-  source $HOME/.asdf/completions/asdf.bash
 fi
 
 if [ -d "$HOME/.rbenv" ]; then
@@ -28,6 +27,9 @@ fi
 
 if [ -d "$HOME/.config/composer" ]; then
   export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+fi
+if [ -d "$HOME/.composer" ]; then
+  export PATH="$HOME/.composer/vendor/bin:$PATH"
 fi
 
 if [ -d "$HOME/.yarn/bin" ]; then

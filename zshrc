@@ -64,6 +64,7 @@ antibody bundle mafredri/zsh-async
 # antibody bundle sindresorhus/pure
 antibody bundle paulirish/git-open
 antibody bundle denysdovhan/spaceship-prompt
+antibody bundle bobsoppe/zsh-ssh-agent
 
 # Syntax highlighting bundle.
 antibody bundle zsh-users/zsh-syntax-highlighting

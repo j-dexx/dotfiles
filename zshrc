@@ -63,7 +63,6 @@ source <(antibody init)
 antibody bundle mafredri/zsh-async
 # antibody bundle sindresorhus/pure
 antibody bundle paulirish/git-open
-antibody bundle denysdovhan/spaceship-prompt
 antibody bundle bobsoppe/zsh-ssh-agent
 
 # Syntax highlighting bundle.
@@ -77,3 +76,6 @@ if [ -f '/home/james/google-cloud-sdk/path.zsh.inc' ]; then . '/home/james/googl
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/james/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/james/google-cloud-sdk/completion.zsh.inc'; fi
+
+eval "$(starship init zsh)"
+

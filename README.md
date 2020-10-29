@@ -8,6 +8,7 @@ Stuff to install for dotfiles
 - [Ripgrep](https://github.com/BurntSushi/ripgrep)
 - [RCM](https://github.com/thoughtbot/rcm)
 - [asdf](https://github.com/asdf-vm/asdf) - ASDF version manager
+- [starship](https://starship.rs/)
 
 Other useful stuff
 

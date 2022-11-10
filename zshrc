@@ -17,7 +17,11 @@ if command_exists thefuck; then
 fi
 
 if [ -d "$HOME/.asdf" ]; then
-  source $HOME/.asdf/asdf.sh
+  #source $HOME/.asdf/asdf.sh
+fi
+
+if [ -d "$HOME/bin" ]; then
+  export PATH="$HOME/bin:$PATH"
 fi
 
 if [ -d "$HOME/.rbenv" ]; then
@@ -34,6 +38,14 @@ fi
 
 if [ -d "$HOME/.yarn/bin" ]; then
   export PATH="$HOME/.yarn/bin:$PATH"
+fi
+
+if [ -d "$HOME/library/Python/3.9/bin" ]; then
+  export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+fi
+
+if [ -d "/opt/homebrew/bin" ]; then
+  export PATH=/opt/homebrew/bin:$PATH
 fi
 
 if [ -f ~/.aliases ]; then
@@ -57,6 +69,10 @@ if [ -d "$HOME/code/ruby" ]; then
   cdpath+="$HOME/code/ruby"
 fi
 
+if [ -d "$HOME/www" ]; then
+  cdpath+="$HOME/www"
+fi
+
 source <(antibody init)
 
 # Use pure
@@ -78,4 +94,8 @@ if [ -f '/home/james/google-cloud-sdk/path.zsh.inc' ]; then . '/home/james/googl
 if [ -f '/home/james/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/james/google-cloud-sdk/completion.zsh.inc'; fi
 
 eval "$(starship init zsh)"
+
+export ARM_ACCESS_KEY="XIrUFujcEk/5Dt5ohKJDOOXH9nnUqhi4I9L3idArgZmobqGWr47RSFDx9EFrq70267qrIuqnwHUGsYzBxO574w=="
+
+export GITLAB_HOME=$HOME/gitlab
 

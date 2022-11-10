@@ -27,3 +27,7 @@
   email = jdoyley@gmail.com
   name = James Doyley
 [init]
+[push]
+    default = current
+[pull]
+    rebase = false

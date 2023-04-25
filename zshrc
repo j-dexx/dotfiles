@@ -7,6 +7,10 @@ command_exists () {
   type "$1" > /dev/null 2>&1;
 }
 
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+    eval `ssh-agent -s`
+    ssh-add
+fi
 
 if command_exists kubectl; then
   source <(kubectl completion zsh)
@@ -69,23 +73,11 @@ if [ -d "$HOME/code/ruby" ]; then
   cdpath+="$HOME/code/ruby"
 fi
 
-if [ -d "$HOME/www" ]; then
-  cdpath+="$HOME/www"
-fi
+# source antidote
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 
-source <(antibody init)
-
-# Use pure
-antibody bundle mafredri/zsh-async
-# antibody bundle sindresorhus/pure
-antibody bundle paulirish/git-open
-antibody bundle bobsoppe/zsh-ssh-agent
-
-# Syntax highlighting bundle.
-antibody bundle zsh-users/zsh-syntax-highlighting
-
-# https://github.com/sindresorhus/pure/issues/276
-setopt prompt_subst
+# initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
+antidote load
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/james/google-cloud-sdk/path.zsh.inc' ]; then . '/home/james/google-cloud-sdk/path.zsh.inc'; fi
@@ -94,8 +86,4 @@ if [ -f '/home/james/google-cloud-sdk/path.zsh.inc' ]; then . '/home/james/googl
 if [ -f '/home/james/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/james/google-cloud-sdk/completion.zsh.inc'; fi
 
 eval "$(starship init zsh)"
-
-export ARM_ACCESS_KEY="XIrUFujcEk/5Dt5ohKJDOOXH9nnUqhi4I9L3idArgZmobqGWr47RSFDx9EFrq70267qrIuqnwHUGsYzBxO574w=="
-
-export GITLAB_HOME=$HOME/gitlab
 

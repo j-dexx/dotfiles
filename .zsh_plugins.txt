@@ -1,0 +1,7 @@
+
+mafredri/zsh-async
+paulirish/git-open
+bobsoppe/zsh-ssh-agent
+
+# Syntax highlighting bundle.
+zsh-users/zsh-syntax-highlighting

@@ -1,7 +1,3 @@
-# Autocompletion
-autoload -Uz compinit
-compinit
-
 # Check if a command exists
 command_exists () {
   type "$1" > /dev/null 2>&1;
@@ -21,7 +17,9 @@ if command_exists thefuck; then
 fi
 
 if [ -d "$HOME/.asdf" ]; then
-  #source $HOME/.asdf/asdf.sh
+  source $HOME/.asdf/asdf.sh
+  # append completions to fpath
+  fpath=(${ASDF_DIR}/completions $fpath)
 fi
 
 if [ -d "$HOME/bin" ]; then
@@ -84,6 +82,9 @@ if [ -f '/home/james/google-cloud-sdk/path.zsh.inc' ]; then . '/home/james/googl
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/james/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/james/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Autocompletion
+autoload -Uz compinit && compinit
 
 eval "$(starship init zsh)"
 

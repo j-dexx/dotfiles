@@ -15,6 +15,7 @@
   excludesfile = ~/.gitignore
   autocrlf = input
   editor = "nvim"
+	eol = lf
 [merge]
   ff = only
 [commit]
@@ -29,5 +30,6 @@
 [init]
 [push]
     default = current
+	autoSetupRemote = true
 [pull]
     rebase = false

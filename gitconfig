@@ -25,11 +25,11 @@
 [rebase]
   autosquash = true
 [user]
-  email = jdoyley@gmail.com
-  name = James Doyley
+  email = james.doyley@groupe-atlantic.co.uk
+  name = GAUKjpd
 [init]
 [push]
     default = current
-	autoSetupRemote = true
+    autoSetupRemote = true
 [pull]
     rebase = false

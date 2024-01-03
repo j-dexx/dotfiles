@@ -89,7 +89,7 @@ augroup END
 " =================================
 " PLugins
 " =================================
-call plug#begin('~/.vim/plugged')
+call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 " Make sure use single quotes
 
 " Language support on demand!

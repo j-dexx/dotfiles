@@ -8,6 +8,9 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
     ssh-add
 fi
 
+# Autocompletion
+autoload -Uz compinit && compinit
+
 if command_exists kubectl; then
   source <(kubectl completion zsh)
 fi
@@ -71,6 +74,14 @@ if [ -d "$HOME/code/ruby" ]; then
   cdpath+="$HOME/code/ruby"
 fi
 
+if [ -d "$HOME/code/js" ]; then
+  cdpath+="$HOME/code/js"
+fi
+
+if [ -d "$HOME/code/c-sharp" ]; then
+  cdpath+="$HOME/code/c-sharp"
+fi
+
 # source antidote
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 
@@ -83,8 +94,6 @@ if [ -f '/home/james/google-cloud-sdk/path.zsh.inc' ]; then . '/home/james/googl
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/james/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/james/google-cloud-sdk/completion.zsh.inc'; fi
 
-# Autocompletion
-autoload -Uz compinit && compinit
 
 eval "$(starship init zsh)"
 

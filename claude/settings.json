@@ -57,5 +57,9 @@
       "Bash(az * production *:*)",
       "Bash(func start:*)"
     ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "npx ccstatusline@latest"
   }
 }

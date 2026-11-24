@@ -7,7 +7,7 @@ Stuff to install for dotfiles
 - [Vim Plug](https://github.com/junegunn/vim-plug)
 - [Ripgrep](https://github.com/BurntSushi/ripgrep)
 - [RCM](https://github.com/thoughtbot/rcm)
-- [asdf](https://github.com/asdf-vm/asdf) - ASDF version manager
+- [mise-en-place](https://mise.jdx.dev) - version manager
 - [starship](https://starship.rs/)
 
 Other useful stuff

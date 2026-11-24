@@ -23,13 +23,15 @@
 [fetch]
   prune = true
 [rebase]
+  instructionFormat = %s%nexec GIT_COMMITTER_DATE=\"%cI\" GIT_COMMITTER_NAME=\"%cN\" GIT_COMMITTER_EMAIL=\"%cE\" git commit --amend --no-edit%n
   autosquash = true
 [user]
   email = james.doyley@groupe-atlantic.co.uk
   name = GAUKjpd
 [init]
+	defaultBranch = main
 [push]
     default = current
     autoSetupRemote = true
 [pull]
-    rebase = false
+	rebase = true

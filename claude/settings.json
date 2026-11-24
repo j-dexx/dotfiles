@@ -1,0 +1,61 @@
+{
+  "permissions": {
+    "deny": [
+      "NotebookEdit",
+      "DesignSync",
+      "CronCreate",
+      "CronDelete",
+      "CronList",
+      "EnterPlanMode",
+      "ExitPlanMode",
+      "PushNotification",
+      "RemoteTrigger",
+      "ReportFindings",
+      "ScheduleWakeup",
+      "SendFeedback"
+    ]
+  },
+  "disableClaudeAiConnectors": true,
+  "disableWorkflows": true,
+  "disableBundledSkills": true,
+  "disableArtifact": true,
+  "enabledPlugins": {
+    "mattpocock-skills@claude-plugins-official": true,
+    "swift-lsp@claude-plugins-official": true,
+    "csharp-lsp@claude-plugins-official": true
+  },
+  "autoMode": {
+    "environment": [
+      "### Org-wide",
+      "**Organization**: GAUK-Developers (GitHub org; repo remote github.com:GAUK-Developers/warranty-contract-loader-functions-app.git)",
+      "**Cloud provider(s)**: Azure (Azure Functions v4 app; Azure Blob Storage host `stwclproduks001.blob.core.windows.net` contacted in-session; CI secrets AZURE_CLIENT_ID, AZURE_SUBSCRIPTION_ID, AZURE_TENANT_ID reference Azure)",
+      "**Repository visibility**: Private — GAUK-Developers/warranty-contract-loader-functions-app (confirmed via gh)",
+      "**Internal sharing / snippet hosting**: None configured — treat public paste/gist services as outside the trust boundary",
+      "**Secrets management**: Azure Key Vault for production SSH keys (per README); local dev secrets via local.settings.json (gitignored) and base64-encoded SSH keys (.docker/ssh_host_ed25519_key, .docker/homeserve-sftp/homeserve_ed25519_key, .docker/homeserve-sftp/encoded_key.txt, .docker/d-and-g-sftp/d_and_g_ed25519_key, .docker/d-and-g-sftp/encoded_key.txt — all gitignored, never to be committed)",
+      "**Default / protected branches**: main (default); main and production are protected branches; rulesets `Staging`, `default`, `production` are active (via gh — authoritative)",
+      "**CI/CD deploy targets**: GitHub Actions workflows (.github/workflows) deploying to Azure, authenticating via AZURE_CLIENT_ID/AZURE_SUBSCRIPTION_ID/AZURE_TENANT_ID; FAST_FORWARD_PAT used for repo automation",
+      "**Network posture**: None configured",
+      "**Host containment**: None configured — assume Claude Code runs on an ordinary developer machine or CI runner with open internet",
+      "**Source control**: The trusted repo (GAUK-Developers/warranty-contract-loader-functions-app) and its origin remote only",
+      "**Trusted internal domains**: None configured",
+      "**Trusted cloud buckets**: None configured",
+      "**Key internal services**: Salesforce (Composite API integration via NetCoreForce.Client, username/password OAuth); Domestic & General SFTP server; Homeserve SFTP server; ContractorConnect MySQL database; Web Registrations SQL Server database",
+      "**Internal package registry**: None configured",
+      "**Sensitive data locations & audiences**: MongoDB `WarrantiesContractsProcessing` collection (customer billing Account, installation Site, Installer, Contract, Asset records — personal/customer data); local.settings.json and SSH private key files (.docker/ssh_host_ed25519_key, .docker/homeserve-sftp/homeserve_ed25519_key, .docker/d-and-g-sftp/d_and_g_ed25519_key and their encoded_key.txt counterparts) — credentials, share only with cleared engineering audiences",
+      "**Data retention / declassification**: None configured",
+      "**Sensitive remote targets**: any namespace, host, or container whose name carries `prod` or `production` as a whole word or name segment — includes the `production` protected branch/ruleset and host `stwclproduks001.blob.core.windows.net` (contains `produks`/prod-like segment — treat as sensitive out of caution)",
+      "**Protected deployment namespaces / environments**: `production` branch/ruleset; `Staging` ruleset",
+      "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries `prod` or `production` as a whole word or name segment",
+      "### User-specific",
+      "**Primary use of Claude Code**: software development (Azure Functions warranty/contract ingestion pipeline, C#/.NET)",
+      "**Trusted repo**: /Users/james/code/c-sharp/WarrantyContractLoader, remote origin github.com:GAUK-Developers/warranty-contract-loader-functions-app.git (private)",
+      "**Org-specific CLIs**: az (Azure CLI, used 4× in session); dotnet (build/test); acli, func (Azure Functions Core Tools) — routine under this project",
+      "No routine-under-<user>/-prefix qualifiers found"
+    ],
+    "soft_deny": [
+      "$defaults",
+      "Bash(az * production *:*)",
+      "Bash(func start:*)"
+    ]
+  }
+}

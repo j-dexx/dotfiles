@@ -10,3 +10,5 @@ if command_exists kubectl; then
   # switch namespace with kcd namespace
   alias kcd='kubectl config set-context $(kubectl config current-context) --namespace '
 fi
+
+alias awsume-dev="awsume jpd-connect -o jpd-connect --role-arn arn:aws:iam::497273648105:role/OrganizationAccountAccessRole --source-profile jpd"
